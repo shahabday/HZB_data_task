@@ -33,9 +33,9 @@ Each JSON output file contains:
 | `common_metadata` | Metadata shared across Gamry files (e.g., operator, date, comments) |
 | `experiment_metadata` | Type-specific metadata |
 | `data`            | Main data table, converted into structured list of dictionaries |
-| `doe_version`     | Version identifier for the DOE design | (to be implemented)
-| `battery_id`      | Unique identifier for the battery or material tested | (to be implemented)
-| `doe_section`     | Integer indicating the current step in the DOE protocol | (to be implemented)
+| `doe_version`     | Version identifier for the DOE design (to be implemented) | 
+| `battery_id`      | Unique identifier for the battery or material tested (to be implemented)| 
+| `doe_section`     | Integer indicating the current step in the DOE protocol (to be implemented)| 
 
 > **Note**: `doe_version` refers to a separate table/file (not implemented here), which defines the full DOE plan including section numbers, categorical tags, and comments.
 
