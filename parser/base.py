@@ -2,11 +2,15 @@ import json
 from abc import ABC, abstractmethod
 from parser.utils import smart_open  
 
+
+
+
 class GammryParser(ABC):
-    def __init__(self, filepath):
+    def __init__(self, filepath , extra_metadata=None):
         self.filepath = filepath
         self.metadata = {}
         self.data = []
+        self.extra_metadata = extra_metadata or {}
 
     def parse(self):
         lines = self._read_file()
@@ -40,6 +44,21 @@ class GammryParser(ABC):
         pass
 
     def export_json(self, output_path):
+        with open(output_path, 'w') as f:
+            json.dump({
+                "instrument_type": "Gamry",
+                "experiment_class": self.__class__.__name__.replace("Parser", ""), #This will replase specific parser class name 
+                "metadata" : self.metadata,
+                "doe_version": self.extra_metadata.get("doe_version"),
+                "battery_id": self.extra_metadata.get("battery_id"),
+                "doe_section": self.extra_metadata.get("doe_section"),
+                "data": self.data
+
+
+            }, f, indent=2)
+
+
+    def export_json_old(self, output_path):
         with open(output_path, 'w') as f:
             json.dump({
                 "metadata": self.metadata,
