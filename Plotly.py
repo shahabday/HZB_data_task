@@ -2,7 +2,7 @@ import plotly.graph_objects as go
 import json
 
 # Load the parsed data
-with open("output2.json", "r") as f:
+with open("output/output3.json", "r") as f:
     parsed = json.load(f)
 data = parsed["data"]
 

@@ -1,6 +1,6 @@
 import json
 from abc import ABC, abstractmethod
-from utils import smart_open  
+from parser.utils import smart_open  
 
 class GammryParser(ABC):
     def __init__(self, filepath):

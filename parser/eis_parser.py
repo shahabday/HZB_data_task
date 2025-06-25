@@ -1,4 +1,4 @@
-from base import GammryParser
+from parser.base import GammryParser
 
 
 from collections import defaultdict
