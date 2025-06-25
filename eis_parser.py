@@ -19,7 +19,7 @@ class EISParser(GammryParser):
     
     def _extract_data(self, lines):
         start_index = next(i for i, line in enumerate(lines) if line.startswith("ZCURVE"))
-        headers = lines[start_index + 1].strip().split('\t')[1:]  # skip indent
+        headers = lines[start_index + 1].strip().split('\t')
         data_lines = lines[start_index + 3:]  # skip two header lines
 
         data_dict = defaultdict(list)

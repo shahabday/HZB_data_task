@@ -7,6 +7,6 @@ experiment_type = detect_experiment_type(filepath)
 if experiment_type == "PWR800_HYBRIDEIS":
     parser = EISParser(filepath)
     parser.parse()
-    parser.export_json("output.json")
+    parser.export_json("output2.json")
 else:
     print("Unsupported experiment type:", experiment_type)
