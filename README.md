@@ -45,6 +45,9 @@ Each JSON output file contains:
 
 A simple plotting script is included  to quickly visualize parsed data (e.g., Nyquist plots for EIS). This is intended to validate the correctness of the parsing.
 
+![Nyquist Plot](Plots/Nyquist.png)
+![Bode Plot](Plots/Bode.png)
+
 ---
 
 ## ⚙️ How to Run
