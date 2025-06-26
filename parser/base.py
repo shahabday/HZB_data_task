@@ -3,9 +3,12 @@ from abc import ABC, abstractmethod
 from parser.utils import smart_open  
 
 
-
-
 class GammryParser(ABC):
+    """
+    This is a base calss for all data files created by gammry instruments 
+    It contanst abstract methods which can then be complemented for each experiment type
+    
+    """
     def __init__(self, filepath , extra_metadata=None):
         self.filepath = filepath
         self.metadata = {}
